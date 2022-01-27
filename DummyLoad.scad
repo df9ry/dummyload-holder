@@ -5,12 +5,12 @@ $fs = 0.4;
 // Allgemeines:
 delta    = 0.1;  // Standard Durchdringung
 
-l        = 4.0;  // Abstand zwischen den Widerständen
+l        = 8.0;  // Abstand zwischen den Widerständen
 z        = 1.0;  // Dicke der Abstandshalter
 d        = 0.5;  // Wanddicke
-ld       = 0.5;  // Lochdurchmesser
+ld       = 0.85; // Lochdurchmesser
 rohr_l   = 5.0;  // Rohrlänge
-rohr_d   = 2.0;  // Rohrdicke
+rohr_d   = 3.75; // Rohrdicke
 
 module scheibe() {
     difference() {
@@ -26,7 +26,7 @@ module scheibe() {
 
 module fill() {
     difference() {
-        cylinder(d = l + 2 * d, h = d);
+        cylinder(d = l + 4 * d, h = d);
         translate([0, 0, -delta])
             cylinder(d = l - 2 * d, h = d + 2 * delta);
     }
@@ -45,7 +45,7 @@ module full() {
 module cut() {
     difference() {
         translate([0, 0, d])
-            cylinder(d = 9.6, h = z);
+            cylinder(d = 20.3, h = z);
         translate([0, 0, -delta])
             cylinder(d = l, h = z + 2 * delta);
     }
