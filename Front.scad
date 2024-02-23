@@ -15,12 +15,12 @@ height    =  68.00;
 thick     =   0.60;
 
 switch_d  =  15.30;
-switch_x0 = 117.90 + switch_d / 2;
+switch_x0 = 107.90 + switch_d / 2;
 switch_y0 =  29.30 + switch_d / 2;
 
 imprint   =   0.40;
 
-module print_text(x0, y0, text, size = 11, 
+module print_text(x0, y0, text, size = 10, 
                   font = "Liberation Sans:style=Bold")
 {
     translate([x0, y0, thick - imprint])
@@ -49,7 +49,7 @@ difference() {
         print_text(10, 10, "DF9RY", 14,
                    "Roddenberry:style=Bold Italic");
         // Symbole:
-        print_svg(124.9, 56, "Antenne.svg", 0.18);
-        print_svg(124.9, 20, "Resistor.svg", 0.55);
+        print_svg(114.9, 56, "Antenne.svg", 0.18);
+        print_svg(114.9, 20, "Resistor.svg", 0.55);
     }
 }
