@@ -10,17 +10,17 @@ use <ttf/RoddenberryBoldItalic-q4ol.ttf>
 // Allgemeines:
 delta  =   0.01;  // Standard Durchdringung
 
-width     = 147.00;
-height    =  67.00;
+width     = 148.00;
+height    =  68.00;
 thick     =   0.60;
 
-switch_d  =  15.65;
-switch_x0 = 100.50 + switch_d / 2;
-switch_y0 =  24.60 + switch_d / 2;
+switch_d  =  15.30;
+switch_x0 = 117.90 + switch_d / 2;
+switch_y0 =  29.30 + switch_d / 2;
 
 imprint   =   0.40;
 
-module print_text(x0, y0, text, size = 8, 
+module print_text(x0, y0, text, size = 11, 
                   font = "Liberation Sans:style=Bold")
 {
     translate([x0, y0, thick - imprint])
@@ -45,11 +45,11 @@ difference() {
             cylinder(h = thick + 2*delta, d = switch_d);
         // Texte:
         print_text(10, 50, "Dummy Load");
-        print_text(10, 35, "50 \u03A9 100W");
-        print_text(10, 10, "DF9RY", 12,
+        print_text(10, 32, "50 \u03A9 100W");
+        print_text(10, 10, "DF9RY", 14,
                    "Roddenberry:style=Bold Italic");
         // Symbole:
-        print_svg(108, 53, "Antenne.svg", 0.20);
-        print_svg(108, 14, "Resistor.svg", 0.55);
+        print_svg(124.9, 56, "Antenne.svg", 0.18);
+        print_svg(124.9, 20, "Resistor.svg", 0.55);
     }
 }
